@@ -1,0 +1,244 @@
+/* UNIVERSAL SELECTOR */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Merriweather', 'Arial',serif;
+    font-size: 13px;
+    color: #080808;
+    background-color: #f8f8f8;
+}
+html{
+    text-rendering: optimizeLegibility;
+}
+
+/* DISPLAY CONTAINER */
+.main-container{
+    max-width: 100%;
+}
+
+/*========= NAVIGATION BAR ========*/
+.navcon{
+    width: 100%;
+    padding: 8px 20px;
+    
+}
+.navbar{
+    box-shadow: 2px 0px 5px #080808;
+}
+.navcon a{
+    text-decoration: none;
+    padding: 3px 10px;
+    margin: 0px 5px;
+    font-size: 15px;
+    color: #080808;
+    position: relative;
+    transition: 1s;
+}
+.navcon a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: #080808;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.navcon a:hover:after{ 
+    width: 100%; 
+    left: 0; 
+}
+.navcon .logo{
+    font-weight: 400;
+    font-size: 18px;
+    display: inline-block;
+    border: 2px solid #080808;
+    padding: 5px 8px 3px;
+    border-radius: 40px;
+    margin: 0px 90px;
+}
+
+
+
+/* ============HEADER 1============= */
+.header1{
+    text-align: center;
+    padding: 60px;
+}
+.header1 .big{
+    font-size: 35px;
+    padding: 15px;
+}
+.header1 .small{
+    line-height: 1.4rem;
+    letter-spacing: 0.02rem;
+    word-spacing: 0.3rem;
+    width: 50%;
+    margin: auto;
+}
+.header1 .sideIcons{
+    position: absolute;
+    right: 0;
+    top: 30vh;
+    transform: translate(0%,-50%);
+    padding: 3px;
+    border-radius: 8px 0px 0px 5px;
+}
+.header1 .sideIcons img{
+    display: block;
+    padding: 2px;
+    cursor: pointer;
+}
+
+/* =============FLEX CARDS============ */
+.flex-con{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding: 20px;
+}
+.flex-con::-webkit-scrollbar{
+    display: none;
+}
+.flex-con .item{
+    min-width: 30%;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: rgb(241, 235, 235);
+    box-shadow: 3px 5px 25px #555;
+}
+.flex-con .item img{
+    width: 100%;
+    height: 35vh;
+    opacity: 0.7;
+    transform: scale(1.2);
+    overflow: hidden;
+    cursor: pointer;
+    transition: 1.5s;  
+}
+.over{
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: black;
+}
+.item img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+.flex-con .item p{
+    padding: 15px;
+}
+
+
+
+
+/* MEDIA QUERIES FOR IPAD PRO */
+@media(max-width: 1024px){
+    .hide{
+        display: none;
+    }
+    .navbar .logo{
+        display: none;
+    }
+    .flex-con{
+        width: 70%;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+    .flex-con .item{
+        min-width: 40%;
+    }
+    .flex-con .item img{
+        height: 20vh;
+    }
+    .header1 .small{
+        font-size: 15px;
+    }
+}
+
+/* MEDIA QUERIES FOR TABLET */
+@media(max-width: 786px){
+    .header1 .small{
+        width: 75%;
+    }
+    .navcon{
+        max-width: 0;
+        overflow: hidden;
+        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 0px;
+        z-index: 1;
+        min-height: 100vh;
+        transition: max-width 0.5s;
+        background-color: #f8f8f8;
+    }
+    .slide{
+        max-width: 100%;
+    }
+    .navcon a{
+        display: block;
+        width: 30%;
+        text-align: center;
+        padding: 10px 25px;
+        margin: 20px auto;
+        font-size: 1.5rem;
+    }
+    /* OPEN NAV */
+    #menu .bar{
+        width: 35px;
+        height: 3px;
+        margin-bottom: 8px;
+        background-color: #080808;
+    }
+    #menu{
+        position: fixed;
+        margin: 10px 30px;
+        cursor: pointer;
+        z-index: 2;
+        padding: 8px 5px 0px;
+        background-color: #f8f8f8;
+    }
+}
+
+
+/* MEDIA QUERIES FOR MOBILE */
+@media(max-width: 414px){
+    .header1{
+        padding: 100px 20px;
+    }
+    .header1 .small{
+        width: 80%;
+        line-height: 1rem;
+        font-weight: 200;
+        margin: 20px auto 0px;
+    }
+    .flex-con{
+        width: 100%;
+        padding: 0px;
+    }
+    .flex-con .item{
+        min-width: 90%;
+    }
+    .flex-con .item img{
+        height: 35vh;
+    }
+    .navcon{
+        padding: 40px 0px;
+    }
+    .navcon a{
+        padding: 5px;
+        margin: 7px auto;
+        width: 50%;
+    }
+    .header1 .sideIcons{
+        top: 35vh;
+    }
+}

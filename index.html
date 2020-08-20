@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URBAN</title>
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main-container">
+
+        <header class="header">
+
+            <!-- NAVIGATION BAR -->
+        <nav class="navbar">
+
+            <!-- HAMBURGER FOR MOBILE DEVICE -->
+            <div id="menu" onclick="openNav(this)">
+                <div class="bar1 bar"></div>
+                <div class="bar2 bar"></div>
+                <div class="bar3 bar"></div>
+            </div>
+
+            <div class="navcon">
+
+            <!-- LEFT MENU -->
+            <a href="#">Home</a>
+            <a href="#">Pages</a>
+            <a href="#">Features</a>
+            <a href="#">Works</a>
+            <a href="#">Blog</a>
+            <a href="#">Shop</a>
+            <a href="#">Extra</a>
+
+            <span class="logo">U</span>
+
+            <!-- RIGHT MENU -->
+            <a href="#">Lookbook</a>
+            <a href="#">Collection</a>
+            <a href="#">Store Locator</a>
+            <a href="#">My Account</a>
+
+            <!-- BAG ICON -->
+            <img src="icon/002-shopping-bag.png" style="margin: 0px 25px;" class="hide">
+
+            </div>
+
+        </nav>
+
+        <!-- HEADING CONTAINER -->
+        <div class="header1">
+                <p class="big">Latest News</p>
+                <p class="small">Our designs balance a modern perspective natural to the urban with an ingrained value of comtempory technique,discipline and detail attention</p>
+
+                <div class="sideIcons">
+                    <img src="icon/001-gear.png" alt="setting">
+                    <img src="icon/006-envelope.png" alt="message">
+                    <img src="icon/007-heart.png" alt="heart">
+                    <img src="" alt="">
+                    <img src="icon/003-monitor.png" alt="monitor">
+                </div>
+        </div>
+
+        <!-- CARDS FLEXBOX -->
+        <div class="flex-con">
+            <div class="item item1">
+                <div class="over">
+                <img src="img/one.jpg">
+                </div>
+                <p>Invest some of you source.</p>
+            </div>
+
+            <div class="item">
+                <div class="over">
+                <img src="img/two.jpg">
+                </div>
+                <p>Check out creative and amazing pic on pininterest.</p>
+            </div>
+
+            <div class="item">
+                <div class="over">
+                <img src="img/three.jpg">
+                </div>
+                <p>This moonsoon protect your kingdom by following ways</p>
+            </div>
+
+            <div class="item">
+                <div class="over">
+                <img src="img/four.jpg">
+                </div>
+                <p>Connecting to Create Creative Stuff</p>
+            </div>
+
+            <div class="item">
+                <div class="over">
+                <img src="img/five.jpg">
+                </div>
+                <p>Japan feul leakage in Indian Ocean</p>
+            </div>
+
+            <div class="item">
+            <div class="over">
+                <img src="img/six.jpg">
+                </div>
+                <p>Vacine ofor COVID-19 will come soon!!!</p>
+            </div>
+
+        </div>
+
+        <div class="totop">
+            
+        </div>
+        </header>
+    </div>
+
+    <!-- =========JAVAASCRIPT============ -->
+    <script>
+        function openNav(x){
+            var con = x.nextElementSibling;
+            con.classList.toggle('slide');
+            if(con.classList.contains('slide')){
+            con.style.maxWidth = '100%';
+            }else{
+                con.style.maxWidth = null;
+            }
+
+        }
+    </script>
+</body>
+</html>
